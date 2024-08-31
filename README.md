@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/dearestalexander/blogCardPrev)
-- Live Site URL: [Add live site URL here](https://dearestalexander.github.io/blogCardPrev/)
+- Solution URL: [blog card preview on github](https://github.com/dearestalexander/blogCardPrev)
+- Live Site URL: [blog card preview on github pages](https://dearestalexander.github.io/blogCardPrev/)
 
 ## My process
 
