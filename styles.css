@@ -1,7 +1,148 @@
+/*
+
+Notes:
+
+- Set a variable for the baseline 16px font and calculated all others based on this
+- Used flexbox for the frame with padding, making it easy to align interior elements
+- Left default content-box which made it easy to set image width = content width
 
 
-main { 
-  font-size: 11px; 
-  text-align: center;
-  color: hsl(228, 45%, 44%);
+Tested on Desktop: 1440px
+- Main CSS used based on this
+
+Tested on Mobile: 375px
+- Desktop width is 360 (320 content, + 40 padding), a bit wide on mobile
+- Used @media to switch width to 330 (300 content, + 30 padding) at 500px
+  - Also adjusted the font size slightly
+
+*/
+
+
+:root {
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray500: hsl(0, 0%, 42%);  
+  --color-gray950: hsl(0, 0%, 7%);
+  --font-paragraph: 16px;
+  --font-weight-norm: 500;
+  --font-weight-bold: 800;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-VariableFont_wght.ttf") format("TrueType");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("TrueType");
+  font-style: italic;
+}
+
+body { 
+  background-color: var(--color-yellow);
+  font-family: Figtree;
+}
+
+#frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 450px;
+  padding: 20px;
+  background-color: var(--color-white);
+  box-shadow: 7px 7px black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 1rem;
+}
+
+#graphic {
+  width: 320px;
+  border-radius: 0.3rem;
+}
+
+#category {
+  padding: 0.3rem;
+  margin-top: 20px;
+  font-size: calc(0.8 * var(--font-paragraph));
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-yellow);
+  border-radius: 0.3rem;
+}
+
+#published {
+  margin-top: 0;
+  font-size: calc(0.8 * var(--font-paragraph));
+  color: var(--color-gray950);
+}
+
+h1 {
+  font-size: calc(1.5 * var(--font-paragraph));
+  font-weight: var(--font-weight-bold);
+  margin-top: 10px;
+}
+
+h1:hover {
+  color: var(--color-yellow);
+  cursor: pointer;
+}
+
+#description {
+  width: 90%;
+  font-size: var(--font-paragraph);
+  color: var(--color-gray500);
+  margin-top: 0;
+}
+
+#author {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#author-img {
+  height: 20px;
+}
+
+#author-name {
+margin-left: 10px;
+font-weight: var(--font-weight-bold);
+font-size: calc(0.8 * var(--font-paragraph));
+}
+
+.attribution, .attribution a {
+  font-size: calc(0.8 * var(--font-paragraph));
+  text-decoration: none;
+  color: var(--color-gray950);
+}
+
+@media (max-width: 500px) {
+  #frame { 
+    width: 300px;
+    height: 420px;
+    padding: 15px;
+  }
+  
+  #graphic {
+    width: 300px;
+  }
+
+  #category, #published, #author-name  {
+    font-size: calc(0.7 * var(--font-paragraph));
+  }
+
+  h1 {
+    font-size: calc(1.4 * var(--font-paragraph));
+  }
+
+  #description {
+    font-size: calc(0.9 * var(--font-paragraph));
+  }
+
 }
