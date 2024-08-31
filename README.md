@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/dearestalexander/blog)
-- Live Site URL: [Add live site URL here](https://dearestalexander.github.io/fm-qrCode/)
+- Solution URL: [Add solution URL here](https://github.com/dearestalexander/blogCardPrev)
+- Live Site URL: [Add live site URL here](https://dearestalexander.github.io/blogCardPrev/)
 
 ## My process
 
